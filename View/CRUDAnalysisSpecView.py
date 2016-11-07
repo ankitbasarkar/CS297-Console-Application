@@ -7,6 +7,6 @@ class CRUDAnalysisSpecView:
         print "2. Delete an Analysis Specification"
         print "3. Update an Analysis Specification Name"
         print "4. Continue With Creating An Analysis Specification"
-        print "5. Save Current Analysis Speciffication"
+        print "5. Save Current Analysis Specification"
         print "B. Go Back To Previous Menu"
         print "Q. Press 'Q' to Exit"
