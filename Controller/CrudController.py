@@ -25,6 +25,9 @@ class CRUDController:
         if (Selection == 'b' or Selection == 'B'):
             from Controller.GodController import GodController
             godController = GodController()
+        if (Selection == '1'):
+            from Controller.CreateSpecController import CreateSpecController
+            createSpecController = CreateSpecController()
         else:
             self.renderCRUDOptions()
             self.getCRUDViewOptions()

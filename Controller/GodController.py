@@ -24,9 +24,10 @@ class GodController:
             print "Exiting System"
             time.sleep(3)
             sys.exit()
-        else:
-            self.renderFirstPage()
-            self.getLandingViewOptions()
+
+        # The below part of code will get executed regardless of which option was selected
+        self.renderFirstPage()
+        self.getLandingViewOptions()
 
 
 

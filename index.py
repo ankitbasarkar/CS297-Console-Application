@@ -1,3 +1,4 @@
-# Every Control goes Through this file
+from Config import Config
+Config.initialiseConfig()
 from Controller.GodController import GodController
 controller = GodController()
