@@ -1,0 +1,9 @@
+Check this out krithika:
+    def myFunc(self,SpecObject):
+        print "Myfunction called"
+        thereModule.theirFunc(scaling,.....)
+
+    SpecObject = "Object form spec file"
+    from threading import Thread
+    thread = Thread(target=myFunc, args=SpecObject)
+    thread.start()

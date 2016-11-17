@@ -7,7 +7,8 @@ from View.StartAnalysisView import StartAnalysisView
 class GodController:
     def __init__(self):
         self.renderFirstPage()
-        self.getLandingViewOptions()
+        self.select = self.getLandingViewOptions()
+
 
     def renderFirstPage(self):
         landingView = LandingView()
@@ -15,6 +16,7 @@ class GodController:
 
     def getLandingViewOptions(self):
         Selection = raw_input("Please select a number/letter corresponding to the desired action.\n")
+
         self.handleLandingViewOptions(Selection)
 
     def handleLandingViewOptions(self,Selection):
@@ -24,6 +26,9 @@ class GodController:
             print "Exiting System"
             time.sleep(3)
             sys.exit()
+        if(Selection=='2'):
+            # Krithika working on start Analysis
+            # StartAnalysis = StartAnalysis()
 
         # The below part of code will get executed regardless of which option was selected
         self.renderFirstPage()

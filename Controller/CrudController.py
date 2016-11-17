@@ -16,8 +16,6 @@ class CRUDController:
         self.handleCRUDViewOptions(Selection)
 
     def handleCRUDViewOptions(self,Selection):
-        if (Selection == '1'):
-            pass
         if (Selection == 'q' or Selection == 'Q'):
             print "Exiting System"
             time.sleep(3)
