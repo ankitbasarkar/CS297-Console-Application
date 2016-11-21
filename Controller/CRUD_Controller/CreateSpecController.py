@@ -94,6 +94,24 @@ class CreateSpecController:
             self.handleSpecML()
             return
 
+    def handleSpecScaling(self):
+        SpecScaling = raw_input("Enter Scaling parameter for your Specification.\n")
+        if self.handleCreateSpecCommonOptions(SpecScaling):
+            return True
+        self.Specification.Scaling = SpecScaling
+
+    def handleSpecNormalization(self):
+        SpecNormalization = raw_input("Enter Normalization parameter for your Specification.\n")
+        if self.handleCreateSpecCommonOptions(SpecNormalization):
+            return True
+        self.Specification.Normalization = SpecNormalization
+
+    def handleSpecFiltering(self):
+        SpecFiltering = raw_input("Enter Filtering parameter for your Specification.\n")
+        if self.handleCreateSpecCommonOptions(SpecFiltering):
+            return True
+        self.Specification.Filtering = SpecFiltering
+
 
     def handleCreateSpecOptions(self):
         if self.handleSpecName():
@@ -105,9 +123,21 @@ class CreateSpecController:
         if self.handleSpecML():
             return
 
+        if self.handleSpecScaling():
+            return
 
+        if self.handleSpecNormalization():
+            return
+
+        if self.handleSpecFiltering():
+            return
+
+        print "\nSaving your Specification details\n"
+        time.sleep(1)
         #This will save the specification
         self.saveSpecification()
+        print "\n*************Specification Saved*************\n"
+        time.sleep(1)
 
 
 
