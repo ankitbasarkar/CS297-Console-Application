@@ -2,7 +2,8 @@ import time
 import sys
 from View.LandingView import LandingView
 from View.CRUDAnalysisSpecView import CRUDAnalysisSpecView as CRUDspecView
-from Controller.CrudController import CRUDController
+from Controller.CRUD_Controller.CrudController import CRUDController
+
 from View.StartAnalysisView import StartAnalysisView
 class GodController:
     def __init__(self):
@@ -27,6 +28,7 @@ class GodController:
             time.sleep(3)
             sys.exit()
         if(Selection=='2'):
+            pass
             # Krithika working on start Analysis
             # StartAnalysis = StartAnalysis()
 
