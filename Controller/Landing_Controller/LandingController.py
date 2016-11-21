@@ -3,9 +3,10 @@ import sys
 from View.LandingView import LandingView
 from View.CRUDAnalysisSpecView import CRUDAnalysisSpecView as CRUDspecView
 from Controller.CRUD_Controller.CrudController import CRUDController
+from Controller.PWD_Controller.PWDController import PWDController
 
 from View.StartAnalysisView import StartAnalysisView
-class GodController:
+class LandingController:
     def __init__(self):
         self.renderFirstPage()
         self.select = self.getLandingViewOptions()
@@ -27,10 +28,17 @@ class GodController:
             print "Exiting System"
             time.sleep(3)
             sys.exit()
+
         if(Selection=='2'):
             pass
             # Krithika working on start Analysis
             # StartAnalysis = StartAnalysis()
+
+        if(Selection=='3'):
+            pass
+
+        if(Selection=='4'):
+            PWDObj = PWDController()
 
         # The below part of code will get executed regardless of which option was selected
         self.renderFirstPage()

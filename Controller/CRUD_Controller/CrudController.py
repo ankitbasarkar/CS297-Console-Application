@@ -21,10 +21,10 @@ class CRUDController:
             time.sleep(3)
             sys.exit()
         if (Selection == 'b' or Selection == 'B'):
-            from Controller.GodController import GodController
-            godController = GodController()
+            from Controller.Landing_Controller.LandingController import LandingController
+            LandingControllerObj = LandingController()
         if (Selection == '1'):
-            from Controller.CreateSpecController import CreateSpecController
+            from Controller.CRUD_Controller.CreateSpecController import CreateSpecController
             createSpecController = CreateSpecController()
         else:
             self.renderCRUDOptions()

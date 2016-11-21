@@ -2,11 +2,11 @@ import os
 import platform
 class Config:
     AvailableMLAlgorithms = {}
-    PWDPath = ""
     PathSeperator = ""
+    # The below method is called just once to initialise the config static variables above
     @staticmethod
     def initialiseConfig():
-        Config.AvailableMLAlgorithms = {'SVM Classification', 'SVM Regression', 'Naive Bayes', 'Logistic Regression'}
+        Config.AvailableMLAlgorithms = ['SVM Classification', 'SVM Regression', 'Naive Bayes', 'Logistic Regression']
         platformName = platform.system()
         if(platformName=='Windows'):
             Config.PathSeperator = "\\"

@@ -1,4 +1,4 @@
 from Config import Config
 Config.initialiseConfig()
-from Controller.GodController import GodController
-controller = GodController()
+from Controller.Landing_Controller.LandingController import LandingController
+controller = LandingController()
