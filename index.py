@@ -1,4 +1,5 @@
-from Config import Config
-Config.initialiseConfig()
-from Controller.Landing_Controller.LandingController import LandingController
-controller = LandingController()
+if __name__=='__main__':
+    from Config import Config
+    Config.initialiseConfig()
+    from Controller.Landing_Controller.LandingController import LandingController
+    controller = LandingController()
