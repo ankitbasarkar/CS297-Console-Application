@@ -24,26 +24,22 @@ class LandingController:
         self.handleLandingViewOptions(Selection)
 
     def handleLandingViewOptions(self,Selection):
-        if(Selection=='1'):
-            CRUDSV = CRUDController()
+
         if(Selection=='q'or Selection=='Q'):
             print "Exiting System..."
+            from ProcessPkg.RunningAnalysisProcesses import RunningAnalysisProcesses
+            RunningAnalysisProcesses.terminateAll()
             time.sleep(3)
             sys.exit()
+
+        if (Selection == '1'):
+            CRUDSV = CRUDController()
 
         if(Selection == '2'):
             STARTANAL = StartAnalysisController()
-        if(Selection == 'q' or Selection == 'Q'):
-            print "Exiting System..."
-            time.sleep(3)
-            sys.exit()
 
         if(Selection=='3'):
             STOPANAL = TerminateAnalysisController()
-        if(Selection == 'q' or Selection == 'Q'):
-            print "Exiting System..."
-            time.sleep(3)
-            sys.exit()
 
         if(Selection=='4'):
             PWDObj = PWDController()

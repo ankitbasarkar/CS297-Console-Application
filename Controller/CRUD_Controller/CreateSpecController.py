@@ -39,6 +39,8 @@ class CreateSpecController:
     def handleCreateSpecCommonOptions(self,Selection):
         if (Selection == 'q' or Selection == 'Q'):
             print "Exiting System"
+            from ProcessPkg.RunningAnalysisProcesses import RunningAnalysisProcesses
+            RunningAnalysisProcesses.terminateAll()
             time.sleep(3)
             sys.exit()
         if (Selection == 'b' or Selection == 'B'):
