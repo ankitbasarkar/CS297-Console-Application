@@ -2,15 +2,17 @@ import time
 import sys
 from View.LandingView import LandingView
 from View.CRUDAnalysisSpecView import CRUDAnalysisSpecView as CRUDspecView
+from View.StartAnalysisView import StartAnalysisView
+
 from Controller.CRUD_Controller.CrudController import CRUDController
+from Controller.StartAnalysis_Controller.StartAnalysisController import StartAnalysisController
+from Controller.TerminateAnalysis_Controller.TerminateAnalysisController import TerminateAnalysisController
 from Controller.PWD_Controller.PWDController import PWDController
 
-from View.StartAnalysisView import StartAnalysisView
 class LandingController:
     def __init__(self):
         self.renderFirstPage()
         self.select = self.getLandingViewOptions()
-
 
     def renderFirstPage(self):
         landingView = LandingView()
@@ -25,22 +27,28 @@ class LandingController:
         if(Selection=='1'):
             CRUDSV = CRUDController()
         if(Selection=='q'or Selection=='Q'):
-            print "Exiting System"
+            print "Exiting System..."
             time.sleep(3)
             sys.exit()
 
-        if(Selection=='2'):
-            pass
-            # Krithika working on start Analysis
-            # StartAnalysis = StartAnalysis()
+        if(Selection == '2'):
+            STARTANAL = StartAnalysisController()
+        if(Selection == 'q' or Selection == 'Q'):
+            print "Exiting System..."
+            time.sleep(3)
+            sys.exit()
 
         if(Selection=='3'):
-            pass
+            STOPANAL = TerminateAnalysisController()
+        if(Selection == 'q' or Selection == 'Q'):
+            print "Exiting System..."
+            time.sleep(3)
+            sys.exit()
 
         if(Selection=='4'):
             PWDObj = PWDController()
 
-        # The below part of code will get executed regardless of which option was selected
+        # The code below will get executed regardless of which option was selected
         self.renderFirstPage()
         self.getLandingViewOptions()
 
