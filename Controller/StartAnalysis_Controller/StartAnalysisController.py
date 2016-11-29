@@ -69,7 +69,7 @@ class StartAnalysisController:
                 print str(count) + " : " + file
                 count+=1
 
-            specSelected = raw_input("Please enter the corresponding number to load the specification")
+            specSelected = raw_input("Please enter the corresponding number to load the specification\n")
 
             if self.handleCommonOptions(specSelected):
                 return
@@ -90,7 +90,6 @@ class StartAnalysisController:
 
             FileName = self.getSpecificationFilesinPWD()[int(specSelected)]
             self.loadAndStart(FileName)
-            time.sleep(10)
             return
 
             # if (Selection == '2'):
